@@ -1,0 +1,105 @@
+终极解决方法
+上面我们提到的方法本质上就是一种动态链接库（dll）”的思想，这在 windows 系统下面是一种很常见的思想。一个dll包，就是一个很纯净的依赖库，它本身不能运行，是用来给你的 app 或者业务代码引用的。
+
+同样的 Webpack 最近也新加入了这个功能：webpack.DllPlugin。使用这个功能需要把打包过程分成两步：
+
+打包ddl包
+
+引用ddl包，打包业务代码
+
+首先我们来打包ddl包，首先配置一个这样的 ddl.config.js：
+
+const webpack = require('webpack');
+
+const vendors = [
+    'react',
+    'react-dom',
+    'react-router',
+    // ...其它库
+];
+
+module.exports = {
+    output: {
+        path: 'build',
+        filename: '[name].js',
+        library: '[name]',
+    },
+    entry: {
+        "lib": vendors,
+    },
+    plugins: [
+        new webpack.DllPlugin({
+            path: 'manifest.json',
+            name: '[name]',
+            context: __dirname,
+        }),
+    ],
+};
+webpack.DllPlugin 的选项中：
+
+path 是 manifest.json 文件的输出路径，这个文件会用于后续的业务代码打包；
+
+name 是dll暴露的对象名，要跟 output.library 保持一致；
+
+context 是解析包路径的上下文，这个要跟接下来配置的 webpack.config.js 一致。
+
+运行Webpack，会输出两个文件一个是打包好的 lib.js，一个就是 manifest.json，它里面的内容大概是这样的：
+
+{
+    "name": "vendor_ac51ba426d4f259b8b18",
+    "content": {
+        "./node_modules/react/react.js": 1,
+        "./node_modules/react/lib/React.js": 2,
+        "./node_modules/react/node_modules/object-assign/index.js": 3,
+        "./node_modules/react/lib/ReactChildren.js": 4,
+        "./node_modules/react/lib/PooledClass.js": 5,
+        "./node_modules/react/lib/reactProdInvariant.js": 6,
+        // ............
+    }
+}
+接下来我们就可以快乐地打包业务代码啦，首先写好打包配置文件 webpack.config.js：
+
+const webpack = require('webpack');
+module.exports = {
+    output: {
+        path: 'build',
+        filename: '[name].js',
+    },
+    entry: {
+        app: './src/index.js',
+    },
+    plugins: [
+        new webpack.DllReferencePlugin({
+            context: __dirname,
+            manifest: require('./manifest.json'),
+        }),
+    ],
+};
+webpack.DllReferencePlugin 的选项中：
+
+context 需要跟之前保持一致，这个用来指导 Webpack 匹配 manifest 中库的路径；
+
+manifest 用来引入刚才输出的 manifest.json 文件。
+
+DllPlugin 本质上的做法和我们手动分离这些第三方库是一样的，但是对于包极多的应用来说，自动化明显加快了生产效率。
+
+
+
+PS:
+
+其实还有一个速度的优化点，就是配置babel，让它排除一些文件，当loader这些文件时不进行转换，自动跳过；可在.babelrc文件中配置，示例：
+
+
+{
+    "presets": [
+        "es2015"
+    ],
+    "ignore":[
+        "jquery.js",
+        "jquery.min.js",
+        "angular.js",
+        "angular.min.js",
+        "bootstrap.js",
+        "bootstrap.min.js"
+    ]
+}

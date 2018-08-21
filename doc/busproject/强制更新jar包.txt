@@ -1,0 +1,2 @@
+1. 单击在maven projects窗口中顶部的excute maven goal按钮
+2. 在command line中输入：-U idea:idea

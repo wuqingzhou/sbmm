@@ -1,0 +1,25 @@
+/******************************* 标签样式 ***********************************/
+body { margin: 0;}
+*{ box-sizing:border-box;}
+
+/******************************* -webkit内核浏览器滚动条样式 ***************************************/
+::-webkit-scrollbar-thumb{ background-color:#D7D7D7; height:50px; outline-offset:-2px; outline:2px solid #fff;-webkit-border-radius:4px;
+  border: 2px solid #fff;}
+::-webkit-scrollbar-thumb:hover{ background-color:#FB4446;height:50px;-webkit-border-radius:4px;}
+::-webkit-scrollbar{ width:8px; height:8px;}
+::-webkit-scrollbar-track-piece{ background-color:#fff;-webkit-border-radius:0;}
+
+/**************************自定义样式*************************/
+/* 清除浮动 */
+.wqzClear{}
+.wqzClear:after{ content:""; clear:both; display:block; visibility:hidden;}
+/* 截断文本 */
+.wqzEllipsis{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal;}
+/* 禁止文本选中 */
+.wqz_forbidSel{ moz-user-select: -moz-none;-moz-user-select: none;-webkit-user-select:none;-ms-user-select:none;user-select:none;}
+/* 左对齐 */
+
+/*************************** 移除HTML5 input在type="number"时的上下小箭头 *******************************/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{ -webkit-appearance: none !important; margin: 0;}
+input[type="number"]{-moz-appearance:textfield;}

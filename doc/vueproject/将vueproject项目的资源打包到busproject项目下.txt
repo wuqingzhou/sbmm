@@ -1,0 +1,4 @@
+1. 修改vueproject项目下的如下文件：vueproject/config/index.js
+    修改build中的index为：path.resolve(__dirname, '../../busproject/src/main/resources/static/index.html')
+    修改build中的assetsRoot为：path.resolve(__dirname, '../../busproject/src/main/resources/static/')
+2. 这样，当在vueproject项目下运行npm run build时，就会将静态资源打包到busproject项目下的busproject/src/main/resources/static/下

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wqz.model.sbmm.busproject.mapper.TbLicenseMapper">
+  <resultMap id="BaseResultMap" type="wqz.model.sbmm.busproject.model.TbLicense">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="cluster_name" jdbcType="VARCHAR" property="clusterName" />
+    <result column="cluster_num" jdbcType="INTEGER" property="clusterNum" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="indate" jdbcType="INTEGER" property="indate" />
+    <result column="expire_time" jdbcType="TIMESTAMP" property="expireTime" />
+  </resultMap>
+</mapper>

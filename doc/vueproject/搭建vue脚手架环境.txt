@@ -1,0 +1,32 @@
+https://segmentfault.com/a/1190000011275993
+
+1. 安装node.js。
+	一路使用默认配置安装即可。安装完后，使用node -v命令检验是否安装成功
+	
+2. 安装cnpm。
+	在命令行输入： npm install -g cnpm --registry=https://registry.npm.taobao.org
+	在命令行输入：cnpm -v命令，检验cnpm是否安装成功
+	
+3. 安装vue
+	在命令行输入：cnpm install vue
+
+4. 安装vue-cli
+	在命令行输入：cnpm install --global vue-cli
+	
+5. 创建一个基于 webpack 模板的新项目（项目名为vueproject）
+	5.1 要创建项目，首先我们要选定目录，然后再命令行中把目录转到选定的目录。可以使用命令：vue init webpack vueproject
+	5.2 安装项目所需要的依赖。刚初始化的项目是没有依赖的，如果运行会报错误。可以使用命令：cnpm install
+	5.3 运行项目。cnpm run dev
+	
+
+
+
+
+
+
+
+
+
+
+
+

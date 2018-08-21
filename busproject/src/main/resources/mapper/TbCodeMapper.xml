@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wqz.model.sbmm.busproject.mapper.TbCodeMapper">
+  <resultMap id="BaseResultMap" type="wqz.model.sbmm.busproject.model.TbCode">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="uuid" jdbcType="VARCHAR" property="uuid" />
+    <result column="c_key" jdbcType="VARCHAR" property="cKey" />
+    <result column="value" jdbcType="VARCHAR" property="value" />
+  </resultMap>
+</mapper>

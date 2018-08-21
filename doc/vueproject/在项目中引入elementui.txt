@@ -1,0 +1,8 @@
+1. 假设已经建好项目了（即：执行过命令：vue init webpack itemname建立了项目了，且运行命令：npm run dev能正确启动项目）
+2. 安装 elementUI:
+    2.1 使用命令行进入项目目录，运行命令：cnpm i element-ui -S
+3. 引入elementUI
+    3.1 在main.js中引入elementUI
+        import ElementUI from 'element-ui'
+        import 'element-ui/lib/theme-chalk/index.css'
+        Vue.use(ElementUI)

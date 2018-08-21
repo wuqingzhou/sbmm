@@ -1,0 +1,17 @@
+1. circular-json
+    1.1 解决问题：报错误“Converting circular structure to JSON”。
+    1.2 报错的原因在于：
+        在请求中传递的对象有一个循环引用，比如
+        var a = {};
+        a.b = a;
+    1.3 安装命令：npm install circular-json
+    1.4 使用方式
+        在script标签内。
+        var a = {};
+        a.b = a;
+        var CircularJSON = require('circular-json');
+        console.log(CircularJSON.stringify(a));
+    1.5 参考地址：https://blog.csdn.net/hhthwx/article/details/79307843
+
+2. Axios
+    2.1 https://www.cnblogs.com/hackyo/p/7992174.html

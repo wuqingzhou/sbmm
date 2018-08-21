@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wqz.model.sbmm.busproject.mapper.TbComplexMapper">
+  <resultMap id="BaseResultMap" type="wqz.model.sbmm.busproject.model.TbComplex">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="pk1" jdbcType="VARCHAR" property="pk1" />
+    <id column="pk2" jdbcType="VARCHAR" property="pk2" />
+    <result column="col_a" jdbcType="DOUBLE" property="colA" />
+    <result column="col_b" jdbcType="DATE" property="colB" />
+    <result column="col_c" jdbcType="TIMESTAMP" property="colC" />
+  </resultMap>
+</mapper>

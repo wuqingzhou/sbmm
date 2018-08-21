@@ -1,0 +1,27 @@
+1. idea创建springboot项目
+	1.1 报错initialization failed for https://start.spring.io
+		解决方案：https://blog.csdn.net/chenXiaosCode/article/details/81006533
+
+2. 使用vue脚手架搭建webpack项目
+	1. https://segmentfault.com/a/1190000011275993
+	2. https://segmentfault.com/a/1190000012736387
+
+3. springboot配置mysql数据源，配置mybatis
+	1. https://www.cnblogs.com/liangblog/p/5228548.html
+
+4. springboot集成mybatis generator插件
+	1. https://blog.csdn.net/hxltech/article/details/74908791
+	2. https://blog.csdn.net/travellersy/article/details/78620247
+
+5. 通用mapper
+    1.https://github.com/abel533/Mapper/wiki/1.3-spring-boot
+
+6. spring事件监听
+    1. https://www.cnblogs.com/ssslinppp/p/7607509.html
+    2. https://blog.csdn.net/chinabestchina/article/details/78234243
+
+7. 下载maven依赖
+    1. https://blog.csdn.net/xiaoerye/article/details/74348829
+
+8. mybatis generator
+    1. https://blog.csdn.net/isea533/article/details/42102297
