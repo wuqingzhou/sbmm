@@ -18,7 +18,9 @@ https://segmentfault.com/a/1190000011275993
 	5.2 安装项目所需要的依赖。刚初始化的项目是没有依赖的，如果运行会报错误。可以使用命令：cnpm install
 	5.3 运行项目。cnpm run dev
 	
+6. cnpm install -g webpack
 
+7. cnpm install -g webpack-dev-server
 
 
 
