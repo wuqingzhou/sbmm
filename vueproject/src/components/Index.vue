@@ -33,14 +33,15 @@
     data() {
       return {
         username: '吴庆周',
-
         menuEnableRouter: true
       }
     },
     watch: {
-      '$route'(to, from) {
+      '$route'(to, from) {  // 监听路由变化
         console.log("route 改变了, from:" + from.path + " to: " + to.path);
       }
+    },
+    mounted: function(){
     }
   }
 </script>
@@ -64,5 +65,4 @@
   .welcomeTxt {
     color: #ffd04b;
   }
-
 </style>
