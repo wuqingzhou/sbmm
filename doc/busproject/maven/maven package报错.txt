@@ -1,0 +1,2 @@
+1. 报错Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test
+   执行： mvn clean package -Dmaven.test.skip=true

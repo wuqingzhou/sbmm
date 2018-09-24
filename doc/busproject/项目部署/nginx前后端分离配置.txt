@@ -1,0 +1,22 @@
+1. 下载一个window版的nginx，并解压。下载地址：http://nginx.org/en/download.html
+2. 在nginx目录下的html目录中新建一个子目录，取名为sbmm。将使用webpack打包出来的index.html放入sbmm中，再将static（里面有js、css、fonts）目录也放入sbmm中。
+3. 配置Nginx作为前端HTTP访问器，修改nginx.conf配置文件。
+    server {
+        listen       8083;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root   html/sbmm/;
+            index  index.html;
+            proxy_pass  http://localhost:8081/;
+        }
+
+    }
+
+4. nginx命令。
+    nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退出 nginx
+    nginx -t   #测试配置是否有语法错误

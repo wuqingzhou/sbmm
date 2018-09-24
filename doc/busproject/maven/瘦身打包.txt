@@ -1,0 +1,36 @@
+1. 参考：https://www.jianshu.com/p/ed34ba4a5c12
+2. 关键代码：
+    <includes>
+        <include>
+            <groupId>nothing</groupId>
+            <artifactId>nothing</artifactId>
+        </include>
+    </includes>
+3. <build>
+       <plugins>
+           <plugin>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-maven-plugin</artifactId>
+               <configuration>
+                   <mainClass>com.johnnian.App</mainClass>
+                   <layout>ZIP</layout>
+                   <includes>
+                       <include>
+                           <groupId>nothing</groupId>
+                           <artifactId>nothing</artifactId>
+                       </include>
+                   </includes>
+               </configuration>
+               <executions>
+                   <execution>
+                       <goals>
+                           <goal>repackage</goal>
+                       </goals>
+                   </execution>
+               </executions>
+           </plugin>
+        <plugins>
+   <build>
+
+4. 运行：
+    java -Dloader.path=/path/to/lib -jar /path/to/springboot-jsp-0.0.1-SNAPSHOT.jar
