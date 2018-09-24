@@ -11,7 +11,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @MapperScan(basePackages = "wqz.model.sbmm.busproject.mapper")
 public class BusprojectApplication {
 
-	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(BusprojectApplication.class, args);
-	}
+    public static void main(String[] args) {
+        ConfigurableApplicationContext context = SpringApplication.run(BusprojectApplication.class, args);
+    }
 }
