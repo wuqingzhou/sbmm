@@ -1,6 +1,8 @@
 package wqz.model.sbmm.busproject.model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Table(name = "tb_code")
 public class TbCode {
@@ -11,6 +13,11 @@ public class TbCode {
     private String cKey;
 
     private String value;
+
+    public TbCode(String uuid, String cKey) {
+        this.uuid = uuid;
+        this.cKey = cKey;
+    }
 
     /**
      * @return uuid

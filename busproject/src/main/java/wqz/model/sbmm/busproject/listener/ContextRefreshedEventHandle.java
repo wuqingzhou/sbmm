@@ -29,10 +29,10 @@ public class ContextRefreshedEventHandle implements ApplicationListener<ContextR
         System.out.println("触发事件： " + contextRefreshedEvent.getClass().getName());
         if (contextRefreshedEvent.getApplicationContext().getParent() == null) {
             System.out.println("spring容器初始化完成");
-            System.out.println(JSONArray.parse(JSON.toJSONString(tbCodeMapper.selectAll(), true)));
-            System.out.println(JSONArray.parse(JSON.toJSONString(tbComplexMapper.selectAll(), true)));
-            System.out.println(JSONArray.parse(JSON.toJSONString(tbLicenseMapper.selectAll(), true)));
-            System.out.println(JSONArray.parse(JSON.toJSONString(tbUserMapper.selectAll(), true)));
+//            System.out.println(JSONArray.parse(JSON.toJSONString(tbCodeMapper.selectAll(), true)));
+//            System.out.println(JSONArray.parse(JSON.toJSONString(tbComplexMapper.selectAll(), true)));
+//            System.out.println(JSONArray.parse(JSON.toJSONString(tbLicenseMapper.selectAll(), true)));
+//            System.out.println(JSONArray.parse(JSON.toJSONString(tbUserMapper.selectAll(), true)));
         }
     }
 }
