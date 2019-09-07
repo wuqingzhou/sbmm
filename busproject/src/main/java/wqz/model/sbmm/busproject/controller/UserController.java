@@ -10,7 +10,7 @@ import wqz.model.sbmm.busproject.model.TbUser;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/tbUser")
+@RequestMapping("/tbUser")
 public class UserController {
     @Autowired
     TbUserMapper tbUserMapper;

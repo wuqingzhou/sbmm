@@ -12,9 +12,9 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api':{
-        target:'localhost:8081/',
+        target:'http://localhost:8081/',
         changeOrigin: true,
-        secure: true,
+        secure: false,
         pathRewrite: {
           '^/api':''  // 本身的接口地址没有 '/api' 这种通用前缀，所以要rewrite，如果本身有则去掉
         }
