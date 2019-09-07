@@ -5,6 +5,7 @@
     f
     sdf
 
+
   </div>
 </template>
 
@@ -16,7 +17,7 @@
       return {}
     },
     mounted: function () {
-      var url = "/api/TbUser/list";
+      var url = "/api/tbUser/list";
       axios.get(url).then(function (res) {
         cosole.info(res);
       })

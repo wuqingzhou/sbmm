@@ -23,8 +23,6 @@ public class ContextRefreshedEventHandle implements ApplicationListener<ContextR
     TbLicenseMapper tbLicenseMapper;
     @Autowired
     TbUserMapper tbUserMapper;
-    @Autowired
-    VwAbcMapper vwAbcMapper;
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
@@ -35,7 +33,6 @@ public class ContextRefreshedEventHandle implements ApplicationListener<ContextR
             System.out.println(JSONArray.parse(JSON.toJSONString(tbComplexMapper.selectAll(), true)));
             System.out.println(JSONArray.parse(JSON.toJSONString(tbLicenseMapper.selectAll(), true)));
             System.out.println(JSONArray.parse(JSON.toJSONString(tbUserMapper.selectAll(), true)));
-            System.out.println(JSONArray.parse(JSON.toJSONString(vwAbcMapper.selectAll(), true)));
         }
     }
 }
